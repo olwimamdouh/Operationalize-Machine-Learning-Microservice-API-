@@ -1,30 +1,40 @@
-Cloud DevOps, Scaling Microservices
-The project's goal is to operationalize a machine learning microservice using kubernetes. The service serves out predictions (inference) about housing prices through API calls. The model has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on.
+[![CircleCI](https://circleci.com/gh/ClaireLee22/Operationalize-a-Machine-Learning-Microservice-API.svg?style=svg)](https://circleci.com/gh/ClaireLee22/Operationalize-a-Machine-Learning-Microservice-API)
+# Operationalize-a-Machine-Learning-Microservice-API
+Microservice Project [Udacity Cloud DevOps Engineer Nanodegree]
 
-Install
-Docker
-Virtualbox
-For Mac:
+## Project Overview
+Deploy a containerized Python flask application to serve out predictions (inference) about housing prices through API calls. It uses a a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features. 
 
-brew cask install virtualbox
-Minikube
-brew cask install minikube
-Files explanation
-config.yml: CircleCI configuration file for running the tests
-app.py: Python flask app that serves out predictions (inference) about housing prices through API calls
-Dockerfile: Dockerfile for building the image
-make_prediction.sh: Send a request to the Python flask app to get a prediction, for localhost
-make_prediction2.sh: Send a request to the Python flask app to get a prediction, for minikube kubernetes
-Makefile: includes instructions on environment setup and lint tests
-run_docker.sh: file to be able to get Docker running, locally
-run_kubernetes.sh: file to run the app in kubernetes
-upload_docker.sh: file to upload the image to docker
-Run the project
-You should have a virtual machine like VirtualBox and minikube installed, as per the project environmet instructions. To start a local cluster, type the terminal command:
-minikube start
-To deploy this application in kubernetes run:
-./run_kubernetes.sh
-After you’ve called run_kubernetes.sh, and a pod is up and running, make a prediction using a separate terminal tab and run
-./make_prediction2.sh
-Delete the cluster
-minikube delete
+### Project Procedure
+* Test project code using linting
+* Complete a Dockerfile to containerize this application
+* Deploy containerized application using Docker and make a prediction
+* Configure Kubernetes and create a Kubernetes cluster
+* Deploy a container using Kubernetes and make a prediction
+* Upload a complete Github repo with CircleCI to indicate the code has been tested
+
+
+
+---
+## Getting Started
+### Setup the Environment
+
+* Create a virtualenv and activate it
+```
+python3 -m venv <your_venv>
+source <your_venv>/bin/activate
+```
+* Run `make install` to install the necessary dependencies
+
+### Running `app.py`
+
+1. Standalone:  `python app.py`
+2. Run in Docker:  `./run_docker.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+### Kubernetes Steps
+
+* Setup and Configure Docker locally
+* Setup and Configure Kubernetes locally
+* Create Flask app in Container
+* Run via kubectl
