@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Project Overview
 
@@ -39,3 +40,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+=======
+# Operationalize-Machine-Learning-Microservice-API-
+In this project, I applied the skills I have acquired in this course to operationalize a Machine Learning Microservice API. This project tests the ability to operationalize a Python flask app—in a provided file, app.py—that serves out predictions (inference) about housing prices through API calls.
+>>>>>>> 2a036e2ec918cb3d3ae168d7e56056d950141d95
